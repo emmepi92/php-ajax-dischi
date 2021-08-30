@@ -20,25 +20,19 @@
             <div class="row">
 
                 <?php
-
                     require_once __DIR__ . "/database/dischiDB.php";
-
                     foreach($dischiDB as $disco) { ?>
 
                         <div class="custom-col">
-
                             <div class="album-content">
 
                                 <img src="<?php echo $disco['poster'] ?>" alt="Copertina <?php echo $disco['title'] ?>">
                                 <h4><a href="#"><?php echo $disco['title'] ?></a></h4>
                                 <div class="info"><a href="#"><?php echo $disco['author'] ?></a></div>
                                 <div class="info"><?php echo $disco['year'] ?></div>
-
                             </div>
                         </div>
-
                     <?php }
-
                 ?>
             </div>
         </div>  
