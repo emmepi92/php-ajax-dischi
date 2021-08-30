@@ -1,0 +1,30 @@
+
+.bg-fluid {
+    background-color: rgb(30, 45, 59);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+
+.custom-col {
+    width: calc(100% / 5);
+
+}
+.custom-col img {
+    width: 100%;
+}
+.album-content {
+    margin: 15px 10px;
+    background-color: rgb(46, 58, 70);
+    padding: 20px;
+    height: 390px;
+}
+.album-content h4 {
+    padding: 12px 0;
+}
+
+div.info {
+    color: #999;
+    font-weight: bolder;
+}
