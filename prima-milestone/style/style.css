@@ -32,3 +32,12 @@ div.info {
     color: #999;
     font-weight: bolder;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: underline;
+}

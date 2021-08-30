@@ -30,8 +30,8 @@
                             <div class="album-content">
 
                                 <img src="<?php echo $disco['poster'] ?>" alt="Copertina <?php echo $disco['title'] ?>">
-                                <h4><?php echo $disco['title'] ?></h4>
-                                <div class="info"><?php echo $disco['author'] ?></div>
+                                <h4><a href="#"><?php echo $disco['title'] ?></a></h4>
+                                <div class="info"><a href="#"><?php echo $disco['author'] ?></a></div>
                                 <div class="info"><?php echo $disco['year'] ?></div>
 
                             </div>
