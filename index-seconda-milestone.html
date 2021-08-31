@@ -18,6 +18,7 @@
                 <label for="genre">Filtra per genere:</label>
 
                 <select v-model="filter" :change="filteredDischi()" name="genre" id="genre">
+                    <option value="all">Tutti i generi  </option>
                     <option value="rock">Rock</option>
                     <option value="metal">Metal</option>
                     <option value="jazz">Jazz</option>
