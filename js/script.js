@@ -7,9 +7,8 @@ new Vue (
             dischi: []            
         },
         created() {
-            axios.get('http://localhost:81/php-ajax-dischi/api/apiDischi.php').then((response) =>{
+            axios.get('http://localhost:82/php-ajax-dischi/api/apiDischiFilter.php').then((response) =>{
                 this.dischi = response.data
-
             })
 
         },

@@ -9,6 +9,7 @@ header {
     padding-bottom: 50px;
     color: white;
     text-align: center;
+    min-height: calc(100vh - 80px);
 }
 
 .custom-col {
