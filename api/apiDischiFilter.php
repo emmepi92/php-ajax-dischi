@@ -2,13 +2,19 @@
 
 require_once __DIR__ . "/../database/dischiDB.php";
 
-$filteredDischi = array_filter($dischiDB, function($disco) {
-    if ($disco['genre'] === 'Pop') {
-        return true;
-    } else {
-        return false;
-    }
+$genre =$_GET["genre"];
+
+$filteredDischi = array_filter($dischiDB, function($disco) use ($genre) {
+    return strtolower($disco['genre']) === strtolower($genre);
 });
+
+// var_dump($filteredDischi);
+
+// $filteredDischi = array_filter($dischiDB, function($disco) {
+//     return strtolower($disco['genre']) === strtolower('pop');
+// });
+
+
 
 header('Content-Type: application/json');
 echo json_encode($filteredDischi);

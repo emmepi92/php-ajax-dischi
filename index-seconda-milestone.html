@@ -12,13 +12,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>  
 </head>
 <body>
-    <header>
-
-    </header>
     <div id="app">
+        <header>
+            <div class="container">
+                <label for="genre">Filtra per genere:</label>
+
+                <select v-model="filter" :change="filteredDischi()" name="genre" id="genre">
+                    <option value="rock">Rock</option>
+                    <option value="metal">Metal</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="pop">Pop</option>
+                </select>
+            </div>
+        </header>
         <div class="bg-fluid">
             <div class="container">
-                <div class="row">
+                <div class="row" v-if="newDischi.length === 0">
                     <div class="custom-col" v-for="disco in dischi">
                         <div class="album-content" > 
                             
@@ -30,6 +39,22 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div class="row" v-else>
+                    <div class="custom-col" v-for="disco in newDischi">
+                        <div class="album-content" > 
+                            
+                            <img :src="disco.poster" alt="">
+                            <h4>{{disco.title}}</h4>
+                            <div class="info">{{disco.author}}</div>
+                            <div class="info">{{disco.year}}</div>    
+    
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
