@@ -2,6 +2,8 @@ header {
     height: 80px;
     background-color: rgb(46, 58, 70);
     color: white;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .bg-fluid {
